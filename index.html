@@ -9,20 +9,27 @@
 
 </head>
 <body>
-    <div class="container">
+    <section class="section">
         <h1 class="heading">Cash Register Manager</h1>
-        <p class="description">
+        <p>
             Enter the bill amount and cash given by the customer and know minimum number of notes to return.
         </p>
-        <label for="bill-amount">Bill Amount:</label>
-        <input type="text" id="bill-amount">
-        <!--<button>Next</button>-->
-        <label for="cash-given">Cash Given:</label>
-        <input type="text" id="cash-given">
-        <button id="check-button">Check</button>
-        <p id="error-message"></p>
-        <table class="change-table">
-            <caption>Return Change</caption>
+        <div>
+        <div class="label">Bill Amount:</div>
+        <input type="text" id="billAmt">
+        <button id="nextBtn">Next</button>
+        </div>
+        <div class="cashGivenInput" style="display:block;">
+            <div class="label">Cash Given:</div>
+        <input type="number" id="cashGiven">
+        <button id="checkBtn">Check</button>
+        </div>
+        
+        <div class="errorMsg"></div>
+        <div class="changeReturn">
+            <div class="label">Return Change:</div>
+            <div id="output">
+        <table>
             <tr>
                 <th>Note</th>
                 <td>2000</td>
@@ -35,18 +42,20 @@
             </tr>
             <tr>
                 <th>No. of Notes</th>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
-                <td class="no-of-notes"></td>
+                <td class="noOfNotes"></td>
+                <td class="noOfNotes"></td>
+                <td class="noOfNotes"></td>
+                <td class="noOfNotes"></td>
+                <td class="noOfNotes"></td>
+                <td class="noOfNotes"></td>
+                <td class="noOfNotes"></td>
             </tr>
         </table>
         <h3>Amount to be Returned</h3>
         <p id="ans"></p>
     </div>
+    </div>
+    </section>
 </body>
 <script src="./index.js"></script>
 </html>
